@@ -1,0 +1,15 @@
+def prime_numbers(n):
+	list = []
+	x = 1
+	for i in range(2, n+1):
+		result = True
+		for j in range(2, i):
+			if i % j == 0:
+				result = False
+		if result == True:
+			list.append(i)
+			x += 1
+	print list
+	print ('There are %d prime numbers in %d') % (x - 1, n)
+
+prime_numbers(100)
